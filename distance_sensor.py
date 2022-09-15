@@ -13,18 +13,21 @@ while True:
     try:
         cm = sonar.distance
         print((cm))
-        if cm<5:
-            print("Less Than 5")
-            dot.fill((255,0,0))
-        elif cm>5 and cm<20:
-            print("Between 5 and 20")
-            dot.fill((0,0,255))
-        elif cm>20:
-            print("Greater Than 20")
-            dot.fill((0,255,0))
+        if cm>=5 and cm<=15:
+            r=simpleio.map_range(cm,5,15,255,0)
+            g=simpleio.map_range(cm,5,15,0,0)
+            b=simpleio.map_range(cm,5,15,0,255)
+            print("Between 5 and 15")
+            dot.fill((r,g,b))
+        elif cm>15 and cm<35:
+            r=simpleio.map_range(cm,15,50,0,0)
+            g=simpleio.map_range(cm,15,50,0,255)
+            b=simpleio.map_range(cm,15,50,255,0)
+            print("Between 15 and 35")
+            dot.fill((r,g,b))
         else:
             print("Not Good")
             dot.fill((0,0,0))
     except RuntimeError:
         print("Retrying!")
-    time.sleep(.25)
+    time.sleep(.1)
