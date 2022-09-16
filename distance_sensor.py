@@ -19,15 +19,15 @@ while True:
             b=simpleio.map_range(cm,5,15,0,255)
             print("Between 5 and 15")
             dot.fill((r,g,b))
-        elif cm>15 and cm<35:
-            r=simpleio.map_range(cm,15,50,0,0)
-            g=simpleio.map_range(cm,15,50,0,255)
-            b=simpleio.map_range(cm,15,50,255,0)
-            print("Between 15 and 35")
+        elif cm>15 and cm<25:
+            r=simpleio.map_range(cm,15,25,0,0)
+            g=simpleio.map_range(cm,15,25,0,255)
+            b=simpleio.map_range(cm,15,25,255,0)
+            print("Between 15 and 25")
             dot.fill((r,g,b))
         else:
             print("Not Good")
             dot.fill((0,0,0))
     except RuntimeError:
         print("Retrying!")
-    time.sleep(.1)
+    time.sleep(.01)
