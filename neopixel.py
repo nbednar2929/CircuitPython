@@ -1,4 +1,4 @@
-import board
+import board #importing files
 import neopixel
 import time
 import random 

@@ -1,24 +1,15 @@
-import time
+import time #import files
 import board
 import neopixel
 
+pixel_pin = board.NEOPIXEL #selects neopixel pin
 
-# On CircuitPlayground Express, and boards with built in status NeoPixel -> board.NEOPIXEL
-# Otherwise choose an open pin connected to the Data In of the NeoPixel strip, i.e. board.D1
-pixel_pin = board.NEOPIXEL
+num_pixels = 1 #number of neopixels
 
-# On a Raspberry pi, use this instead, not all pins are supported
-# pixel_pin = board.D18
-
-# The number of NeoPixels
-num_pixels = 10
-
-# The order of the pixel colors - RGB or GRB. Some NeoPixels have red and green reversed!
-# For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
-ORDER = neopixel.GRB
+ORDER = neopixel.GRB #reverses rgb order
 
 pixels = neopixel.NeoPixel(
-    pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER
+    pixel_pin, num_pixels, brightness=0.2, auto_write=False, pixel_order=ORDER #sets parameters for pixels
 )
 
 
@@ -44,7 +35,7 @@ def wheel(pos):
     return (r, g, b) if ORDER in (neopixel.RGB, neopixel.GRB) else (r, g, b, 0)
 
 
-def rainbow_cycle(wait):
+def rainbow_cycle(wait): #colors range in the rainbow
     for j in range(255):
         for i in range(num_pixels):
             pixel_index = (i * 256 // num_pixels) + j
@@ -53,25 +44,17 @@ def rainbow_cycle(wait):
         time.sleep(wait)
 
 
-while True:
-    # Comment this line out if you have RGBW/GRBW NeoPixels
+while True: #fills pixels with colors
     pixels.fill((255, 0, 0))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((255, 0, 0, 0))
     pixels.show()
     time.sleep(1)
 
-    # Comment this line out if you have RGBW/GRBW NeoPixels
     pixels.fill((0, 255, 0))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((0, 255, 0, 0))
+
     pixels.show()
     time.sleep(1)
 
-    # Comment this line out if you have RGBW/GRBW NeoPixels
     pixels.fill((0, 0, 255))
-    # Uncomment this line if you have RGBW/GRBW NeoPixels
-    # pixels.fill((0, 0, 255, 0))
     pixels.show()
     time.sleep(1)
 

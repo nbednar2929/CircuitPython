@@ -1,7 +1,4 @@
-#Nick Bednar
-#9/13/22
-#Servo shifts between 0-180 degrees back and forth.
-import time
+import time #importing files
 import board
 import pwmio
 from adafruit_motor import servo
