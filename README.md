@@ -199,13 +199,13 @@ while True:
 ```
 
 ### Evidence
-
+Uploading IMG_1397.MOV…
 
 ### Wiring
-
+https://www.tinkercad.com/things/lwBiTGJjMhx?sharecode=NrJTTxE0vxY9EQSGDl9TuaRSbY6IFuMhFi1Kk8rBIho
 
 ### Reflection
-
+This one extremely difficult for me to understand exactly what my code was doing since I took some of it off the internet. I overcomplicated the code and created multiple if and elif statements that were unecessary. I ended up just needing an if and an else and a final if that would change the counter if the parameteres from the prior if and else were met. I still don't fully understand how the line "lastBtn = btn.value" works given that I define them as equal but then later call that my counter will only change if they aren't eqaul, but the code works and that's all that matters.
 
 ## NextAssignment
 
