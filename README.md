@@ -13,8 +13,7 @@ This repository will actually serve as a aid to help you get started with your o
 ### Description & Code
 Make the LED blink.
 
-Here's how you make code look like code:
-
+Code:
 ```python
 import board #importing files
 import neopixel
