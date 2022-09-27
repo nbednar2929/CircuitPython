@@ -83,14 +83,14 @@ while True:
 ```
 
 ### Evidence
+Possibly inaccessible video of my servo spinning.
 https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissions/21583?preview=1&rand=350418#
 
 ### Wiring
+https://www.tinkercad.com/things/4zaOqjpcPmA?sharecode=oPQYZcuKgexSuwHOryOQvVEl419SKq6XD9277Xp_Yus
 
 ### Reflection
-
-
-
+This assignment was more difficult because I had no clue what any of this code meant at first. But after doing plenty of research and reading people's code I was able to understand what the code is communicating. Otherwise the code itself is quite concise and simple.
 
 ## CircuitPython_LCD
 
