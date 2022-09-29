@@ -103,7 +103,7 @@ https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissio
 https://www.tinkercad.com/things/4zaOqjpcPmA?sharecode=oPQYZcuKgexSuwHOryOQvVEl419SKq6XD9277Xp_Yus
 
 ### Reflection
-I used some code off the internet to get the servo to start spinning. I was confused with how the range variable wokred but when I hovered over it in VSCode it was really helpful in explaining what it does. For the buttons I just stole the code from the #CircuitPython_LCD assignment but just made two button variables by just putting a two next "btn: in each line. 
+I used some code off the internet to get the servo to start spinning. I was confused with how the range variable wokred but when I hovered over it in VSCode it was really helpful in explaining what it does. For the buttons I just stole the code from the * [CircuitPython_LCD](#CircuitPython_LCD) assignment but just made two button variables by just putting a two next "btn: in each line. 
 
 ## CircuitPyhton_Distance_Sensor
 
