@@ -60,38 +60,49 @@ Given that this was my first circuitpython assignemnt generally eveything was so
 ## CircuitPython_Servo
 
 ### Description & Code
-Make a 180 degree servo spin back and forth.
+Make a 180 degree servo spin back and forth accordingly using two buttons.
 
 ```python
 import time #importing files
 import board
 import pwmio
 from adafruit_motor import servo
+from digitalio import DigitalInOut,Direction,Pull
+import simpleio
 
 # create a PWMOut object on Pin 9.
-pwm = pwmio.PWMOut(board.D9, duty_cycle=2 ** 20, frequency=40)
+pwm = pwmio.PWMOut(board.D7, duty_cycle=2 ** 20, frequency=40)
 
 # Create a servo object, my_servo.
 my_servo = servo.Servo(pwm)
 
+btn = DigitalInOut(board.D4) #create button 1
+btn2 = DigitalInOut(board.D3) #create button 2
+btn.direction = Direction.INPUT #create button 1 direction
+btn.pull = Pull.UP #pull up button 1
+btn2.direction = Direction.INPUT #create button 2 direction
+btn2.pull = Pull.UP #pull up button 2
+
 while True:
-    for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time forward.
-        my_servo.angle = angle
-        time.sleep(0.05)
-    for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time backward.
-        my_servo.angle = angle
-        time.sleep(0.05)
+    if not btn.value: #button 1 being pressed
+        for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time forward.
+            my_servo.angle = angle
+            time.sleep(0.05)
+    if not btn2.value: #button 2 being pressed
+        for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time backward.
+            my_servo.angle = angle
+            time.sleep(0.05)
 ```
 
 ### Evidence
 Possibly inaccessible video of my servo spinning.
-https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissions/21583?preview=1&rand=350418#
+https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissions/21583?preview=1&rand=880109#
 
 ### Wiring
 https://www.tinkercad.com/things/4zaOqjpcPmA?sharecode=oPQYZcuKgexSuwHOryOQvVEl419SKq6XD9277Xp_Yus
 
 ### Reflection
-This assignment was more difficult because I had no clue what any of this code meant at first. But after doing plenty of research and reading people's code I was able to understand what the code is communicating. Otherwise the code itself is quite concise and simple.
+I used some code off the internet to get the servo to start spinning. I was confused with how the range variable wokred but when I hovered over it in VSCode it was really helpful in explaining what it does. For the buttons I just stole the code from the #CircuitPython_LCD assignment but just made two button variables by just putting a two next "btn: in each line. 
 
 ## CircuitPyhton_Distance_Sensor
 
