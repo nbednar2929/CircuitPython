@@ -1,20 +1,12 @@
-
-import board #imoprt all files
+import board #import files
 import time
-import pwmio
-from analogio import AnalogIn
-import adafruit_motor
-#from adafruit_motor import motor
+from analogio import AnalogOut, AnalogIn
 import simpleio
 
-ptmr = AnalogIn(board.A0) #identify potentiometer
-pwm = pwmio.PWMOut(board.D7, duty_cycle=2 ** 20, frequency=40) # create a PWMOut object on Pin 7
-motor1 = adafruit_motor.motor.DCMotor(pwm) # Create a motor object, my_motor
+motor = AnalogOut(board.A1) #motor ouput 
+ptmr = AnalogIn(board.A0) #potentiometer input
 
 while True:
-    print((ptmr.value,)) 
-    spin = ptmr.value
-    spd = simpleio.map_range(spin,0,65535,0,180)
-    for spd in range (0,180, 5):
-        motor1.spd = spd
-        time.sleep(0.05)
+    print(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #print my potentiometer value
+    motor.value = int(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #push potentiometer value to motor
+    time.sleep(.1) #print delay
