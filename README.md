@@ -218,6 +218,39 @@ https://www.tinkercad.com/things/lwBiTGJjMhx?sharecode=NrJTTxE0vxY9EQSGDl9TuaRSb
 ### Reflection
 This one extremely difficult for me to understand exactly what my code was doing since I took some of it off the internet. I overcomplicated the code and created multiple if and elif statements that were unecessary. I ended up just needing an if and an else and a final if that would change the counter if the parameteres from the prior if and else were met. I still don't fully understand how the line "lastBtn = btn.value" works given that I define them as equal but then later call that my counter will only change if they aren't eqaul, but the code works and that's all that matters.
 
+## Motor_Control
+
+### Description & Code
+Make a DC Motor speed up and slow down using a potentiometer as the input.
+
+```python
+import board #import files
+import time
+from analogio import AnalogOut, AnalogIn
+import simpleio
+
+motor = AnalogOut(board.A1) #motor ouput 
+ptmr = AnalogIn(board.A0) #potentiometer input
+
+while True:
+    print(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #print my potentiometer value
+    motor.value = int(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #push potentiometer value to motor
+    time.sleep(.1) #print delay
+#Shoutout to Kazuo Shinozaki for providing such sweet and concise working code!
+
+```
+
+### Evidence
+
+
+### Wiring
+![Motor Control](https://user-images.githubusercontent.com/91289646/199820885-d56dd34b-17ac-4616-81d0-bbdb85e11bd3.png)
+
+### Reflection
+
+
+
+
 ## NextAssignment
 
 ### Description & Code
