@@ -242,7 +242,7 @@ while True:
 ```
 
 ### Evidence
-
+MAKE ALL WIRING PICTURES FOR THIS
 
 ### Wiring
 ![Motor Control](https://user-images.githubusercontent.com/91289646/199820885-d56dd34b-17ac-4616-81d0-bbdb85e11bd3.png)
