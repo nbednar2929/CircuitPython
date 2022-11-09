@@ -246,8 +246,7 @@ while True:
 ![Motor Control](https://user-images.githubusercontent.com/91289646/199820885-d56dd34b-17ac-4616-81d0-bbdb85e11bd3.png)
 
 ### Reflection
-
-
+I found this assignment really difficult given the lack of sample code online using DC Motors and circuit python. I was able to use a wiring diagram from last year to help me with wiring. I accidnetally used a faulty battery pack which set me back about 20 minutes until I got a new one. Given the lack of sample code, I couldn't really do the code for this and ended up using Kaz's code for this assignment.
 
 
 ## NextAssignment
