@@ -100,7 +100,7 @@ Possibly inaccessible video of my servo spinning.
 https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissions/21583?preview=1&rand=880109#
 
 ### Wiring
-https://www.tinkercad.com/things/4zaOqjpcPmA?sharecode=oPQYZcuKgexSuwHOryOQvVEl419SKq6XD9277Xp_Yus
+![circuitpython servo wiring diagram](https://user-images.githubusercontent.com/91289646/200931419-57c8162d-186b-44ca-bbd2-2bf7af23788f.PNG)
 
 ### Reflection
 I used some code off the internet to get the servo to start spinning. I was confused with how the range variable wokred but when I hovered over it in VSCode it was really helpful in explaining what it does. For the buttons I just stole the code from the [CircuitPython_LCD](#CircuitPython_LCD) assignment but just made two button variables by just putting a two next "btn: in each line. 
@@ -152,7 +152,7 @@ Another possibly inaccessible video, but this time it's of an LED gradient in ac
 https://cvilleschools.instructure.com/courses/37129/assignments/493861/submissions/21583?preview=1&rand=336271#
 
 ### Wiring
-https://www.tinkercad.com/things/6XMrDhjvmKd?sharecode=DWHrZT9ahoq1o2GyyZaeRVFx-oCVnplMcarRY1igdAc
+![circuitpython distance sensor wiring diagram](https://user-images.githubusercontent.com/91289646/200931636-51815c0a-9a5a-4df6-9a31-1f9ab45f79bf.PNG)
 
 ### Reflection
 This assignment became much easier when breaking it down into smaller chunks. The main important part before the "while True:" is assigning "sonar" to the pin my distance sensor is connected to. After the "while True:" you just need to logically think about when each color comes in using the "simpleio.map_range". The LED should start off red and slowly go down, there should be no green and the blue should slowly come in. For the second half, there is no red, blue slowly fades out, and green will fade in. This all happens as you start close to your sensor and move out.
@@ -214,7 +214,7 @@ while True:
 Uploading IMG_1397.MOV…
 
 ### Wiring
-https://www.tinkercad.com/things/lwBiTGJjMhx?sharecode=NrJTTxE0vxY9EQSGDl9TuaRSbY6IFuMhFi1Kk8rBIho
+![circuitpython lcd](https://user-images.githubusercontent.com/91289646/200931957-11807ad1-e3bf-4a8a-99f2-55eba04de205.PNG)
 
 ### Reflection
 This one extremely difficult for me to understand exactly what my code was doing since I took some of it off the internet. I overcomplicated the code and created multiple if and elif statements that were unecessary. I ended up just needing an if and an else and a final if that would change the counter if the parameteres from the prior if and else were met. I still don't fully understand how the line "lastBtn = btn.value" works given that I define them as equal but then later call that my counter will only change if they aren't eqaul, but the code works and that's all that matters.
