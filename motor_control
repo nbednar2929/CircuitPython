@@ -10,3 +10,4 @@ while True:
     print(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #print my potentiometer value
     motor.value = int(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #push potentiometer value to motor
     time.sleep(.1) #print delay
+#Shoutout to Kazuo Shinozaki for providing such sweet and concise working code!
