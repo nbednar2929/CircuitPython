@@ -8,20 +8,22 @@ import simpleio
 
 i2c = board.I2C() #get an i2c object 
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16) #initiate LCD screen
-temp = AnalogIn(board.A0)
+temp = AnalogIn(board.A1)
 
 while True:
-    print(simpleio.map_range(temp.value, 1023, 65535, 0, 125))
-    lcd.set_cursor_pos(1,1) #set lcd cursor
-    lcd.print(str(temp.value)) #print temperature
+    celsius = (simpleio.map_range(temp.value, 1023, 65535, 0, 125))
+    fahrenheit = (celsius * (9/5)) + 32
+    lcd.set_cursor_pos(0,0) #set lcd cursor
+    lcd.print(str(fahrenheit)) #print temperature
+    time.sleep(0.5)
     
     if temp.value > 80:
-        lcd.set_cursor_pos(1,2)
+        lcd.set_cursor_pos(1,0)
         lcd.print("Too Hot!                ")
     elif temp.value < 50:
-        lcd.set_cursor_pos(1,2)
+        lcd.set_cursor_pos(1,0)
         lcd.print("Too Hot!                ")
     else:
-        lcd.set_cursor_pos(1,2)
+        lcd.set_cursor_pos(1,0)
         lcd.print("It Feels Great In Here! ")        
     
