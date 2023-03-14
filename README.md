@@ -241,7 +241,7 @@ while True:
 ```
 
 ### Evidence
-
+Uploading IMG_1398.MOV…
 
 ### Wiring
 ![Motor Control](https://user-images.githubusercontent.com/91289646/199820885-d56dd34b-17ac-4616-81d0-bbdb85e11bd3.png)
@@ -255,16 +255,48 @@ I found this assignment really difficult given the lack of sample code online us
 Use a Temperature Sensor and LCD to display the temperature in the room.
 
 ```python
-Code goes here
+import board #imoprt all files
+import time
+from digitalio import DigitalInOut, Direction, Pull
+from analogio import AnalogIn
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import simpleio 
+
+i2c = board.I2C() #get an i2c object 
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16) #initiate LCD screen
+temp = AnalogIn(board.A1)
+
+while True:
+    celsius = (simpleio.map_range(temp.value, 1023, 65535, 0, 125))
+    fahrenheit = (celsius * (9/5)) + 32
+    lcd.set_cursor_pos(0,0) #set lcd cursor
+    lcd.print(str(fahrenheit)) #print temperature
+    time.sleep(0.5)
+    
+    if temp.value > 80:
+        lcd.set_cursor_pos(1,0)
+        lcd.print("Too Hot!                ")
+    elif temp.value < 50:
+        lcd.set_cursor_pos(1,0)
+        lcd.print("Too Hot!                ")
+    else:
+        lcd.set_cursor_pos(1,0)
+        lcd.print("It Feels Great In Here! ")        
 
 ```
 
 ### Evidence
+![Temp Sensor Too Hot](https://user-images.githubusercontent.com/91289646/225115276-0f6cc46d-2c61-4246-ba92-d77ab97371d5.PNG)
+![Temp Sensor Just Right](https://user-images.githubusercontent.com/91289646/225115289-ee73bc74-5286-4a68-973d-77626ca723f0.PNG)
+![Temp Sensor Too Cold](https://user-images.githubusercontent.com/91289646/225115298-e0c5f8b0-e9cc-4708-ac90-1ad619c1ca31.PNG)
+
 
 ### Wiring
+![Temperature Sensor Wiring Diagram](https://user-images.githubusercontent.com/91289646/225113007-83659c83-803a-46d3-a159-ff78cf442791.PNG)
 
 ### Reflection
-
+This assignment wasn't super hard since I was able to take all of my lcd code from a past assignment. The wiring was self explanitory for the exacty same reason as why the code was easy. The main issue I ran into was that my LCD screen didn't print anything I asked it to. The reason was the blue box on the back of the lcd backpack has a scew hole that needed to be turned in order to change the brightness contrast of the LCD so that the screen can actually be seen. 
 
 ________________
 ## Assignment_Template
