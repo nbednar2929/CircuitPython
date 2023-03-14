@@ -1,13 +1,14 @@
 # CircuitPythonEng3
 [Directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
-* [Table of Contents](#TableOfContents)
+* [Table of_Contents](#TableOfContents)
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython Distance Sensor](#CircuitPyhton_Distance_Sensor)
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [Motor_Control](#Motor_Control)
-* [NextAssignmentGoesHere](#NextAssignment)
+* [Temperature_Sensor](#Temperature_Sensor)
+* [Assignment_Template](#Assignment_Template) 
 ---
 
 ## Hello_CircuitPython
@@ -248,8 +249,25 @@ while True:
 ### Reflection
 I found this assignment really difficult given the lack of sample code online using DC Motors and circuit python. I was able to use a wiring diagram from last year to help me with wiring. I accidnetally used a faulty battery pack which set me back about 20 minutes until I got a new one. Given the lack of sample code, I couldn't really do the code for this and ended up using Kaz's code for this assignment.
 
+## Temperature_Sensor
 
-## NextAssignment
+### Description & Code
+Use a Temperature Sensor and LCD to display the temperature in the room.
+
+```python
+Code goes here
+
+```
+
+### Evidence
+
+### Wiring
+
+### Reflection
+
+
+________________
+## Assignment_Template
 
 ### Description & Code
 
