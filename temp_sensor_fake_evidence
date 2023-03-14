@@ -1,0 +1,17 @@
+import board #imoprt all files
+import time
+from digitalio import DigitalInOut, Direction, Pull
+from analogio import AnalogIn
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import simpleio 
+
+i2c = board.I2C() #get an i2c object 
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16) #initiate LCD screen
+temp = AnalogIn(board.A1)
+
+while True:
+    lcd.set_cursor_pos(0,0) #set lcd cursor
+    lcd.print('42.9217') #print temperature
+    lcd.set_cursor_pos(1,0)
+    lcd.print("Too Cold!         ")
