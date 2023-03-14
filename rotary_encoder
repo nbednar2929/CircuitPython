@@ -1,0 +1,17 @@
+import board #imoprt all files
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import time
+from digitalio import DigitalInOut, Direction, Pull
+from analogio import AnalogIn
+import simpleio
+
+i2c = board.I2C() #get an i2c object 
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16) #initiate LCD screen
+
+btn = DigitalInOut(board.D4) #identify button
+btn.direction = Direction.INPUT #identify button direction
+btn.pull = Pull.UP #pull button up
+counter = 0 #initialize counter
+delta = 1 #initialize variable that counter changes by
+lastBtn = btn.value #creates a second button value variable to call back to
