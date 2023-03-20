@@ -254,6 +254,11 @@ I found this assignment really difficult given the lack of sample code online us
 ### Description & Code
 Use a Temperature Sensor and LCD to display the temperature in the room.
 
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
+
 ```python
 import board #imoprt all files
 import time
@@ -285,6 +290,10 @@ while True:
         lcd.print("It Feels Great In Here! ")        
 
 ```
+                         
+</p>
+
+</details>
 
 ### Evidence
 <details>
