@@ -107,7 +107,7 @@ while True:
 
 ### Evidence
 <details>
-<summary><b>Click to Show<b></summary>
+<summary>Click to Show</summary>
     
 <p>
     
@@ -167,7 +167,7 @@ while True:
 
 ### Evidence
 <details>
-<summary><b>Click to Show<b></summary>
+<summary>Click to Show</summary>
     
 <p>
             
@@ -238,7 +238,7 @@ while True:
 
 ### Evidence
 <details>
-<summary><b>Click to Show<b></summary>
+<summary>Click to Show</summary>
     
 <p>
             
@@ -278,7 +278,7 @@ while True:
 
 ### Evidence
 <details>
-<summary><b>Click to Show<b></summary>
+<summary>Click to Show</summary>
     
 <p>
     
@@ -333,7 +333,7 @@ while True:
                         
 ### Evidence
 <details>
-<summary><b>Click to Show<b></summary>
+<summary>Click to Show</summary>
     
 <p>
 
@@ -362,7 +362,7 @@ Code goes here
 ```
 
 <details>
-<summary><b>Click to Show<b></summary>
+<summary>Click to Show</summary>
     
 <p>
     
