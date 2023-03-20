@@ -345,21 +345,23 @@ ________________
 ## Assignment_Template
 
 ### Description & Code
+
+```python
+Code goes here
+
+```
+
 <details>
 <summary><b>Click to Show<b></summary>
     
 <p>
     
-```python
-Code goes here
-
-```
+### Evidence
+   
 </p>
 
 </details>
     
-### Evidence
-
 ### Wiring
 
 ### Reflection
