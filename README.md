@@ -48,8 +48,15 @@ while True:
     time.sleep(0.5)
 ```
 ### Evidence
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
 https://user-images.githubusercontent.com/91289646/192608483-b7759c1c-ec20-432e-8f1a-45b8bb5374d6.MOV
+</p>
 
+</details>
+    
 ### Wiring
 No wiring is required for this assignement.
 
@@ -97,8 +104,15 @@ while True:
 ```
 
 ### Evidence
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
 https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissions/21583?preview=1&rand=880109#
+</p>
 
+</details>
+    
 ### Wiring
 ![circuitpython servo wiring diagram](https://user-images.githubusercontent.com/91289646/200931419-57c8162d-186b-44ca-bbd2-2bf7af23788f.PNG)
 
@@ -148,8 +162,15 @@ while True:
 ```
 
 ### Evidence
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
 https://cvilleschools.instructure.com/courses/37129/assignments/493861/submissions/21583?preview=1&rand=336271#
+</p>
 
+</details>
+            
 ### Wiring
 ![circuitpython distance sensor wiring diagram](https://user-images.githubusercontent.com/91289646/200931636-51815c0a-9a5a-4df6-9a31-1f9ab45f79bf.PNG)
 
@@ -210,8 +231,15 @@ while True:
 ```
 
 ### Evidence
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
 Uploading IMG_1397.MOV…
+</p>
 
+</details>
+            
 ### Wiring
 ![circuitpython lcd](https://user-images.githubusercontent.com/91289646/200931957-11807ad1-e3bf-4a8a-99f2-55eba04de205.PNG)
 
@@ -241,8 +269,15 @@ while True:
 ```
 
 ### Evidence
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
 Uploading IMG_1398.MOV…
+</p>
 
+</details>
+    
 ### Wiring
 ![Motor Control](https://user-images.githubusercontent.com/91289646/199820885-d56dd34b-17ac-4616-81d0-bbdb85e11bd3.png)
 
@@ -253,11 +288,6 @@ I found this assignment really difficult given the lack of sample code online us
 
 ### Description & Code
 Use a Temperature Sensor and LCD to display the temperature in the room.
-
-<details>
-<summary><b>Click to Show<b></summary>
-    
-<p>
 
 ```python
 import board #imoprt all files
@@ -290,11 +320,7 @@ while True:
         lcd.print("It Feels Great In Here! ")        
 
 ```
-                         
-</p>
-
-</details>
-
+                        
 ### Evidence
 <details>
 <summary><b>Click to Show<b></summary>
@@ -319,12 +345,17 @@ ________________
 ## Assignment_Template
 
 ### Description & Code
-
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
 ```python
 Code goes here
 
 ```
+</p>
 
+</details>
 ### Evidence
 
 ### Wiring
