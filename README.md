@@ -52,7 +52,9 @@ while True:
 <summary><b>Click to Show<b></summary>
     
 <p>
+    
 https://user-images.githubusercontent.com/91289646/192608483-b7759c1c-ec20-432e-8f1a-45b8bb5374d6.MOV
+    
 </p>
 
 </details>
@@ -108,7 +110,9 @@ while True:
 <summary><b>Click to Show<b></summary>
     
 <p>
+    
 https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissions/21583?preview=1&rand=880109#
+    
 </p>
 
 </details>
@@ -166,7 +170,9 @@ while True:
 <summary><b>Click to Show<b></summary>
     
 <p>
+            
 https://cvilleschools.instructure.com/courses/37129/assignments/493861/submissions/21583?preview=1&rand=336271#
+            
 </p>
 
 </details>
@@ -235,7 +241,9 @@ while True:
 <summary><b>Click to Show<b></summary>
     
 <p>
+            
 Uploading IMG_1397.MOV…
+            
 </p>
 
 </details>
@@ -273,7 +281,9 @@ while True:
 <summary><b>Click to Show<b></summary>
     
 <p>
+    
 Uploading IMG_1398.MOV…
+    
 </p>
 
 </details>
