@@ -287,10 +287,18 @@ while True:
 ```
 
 ### Evidence
+<details>
+<summary><b>Click to Show<b></summary>
+    
+<p>
+
 ![Temp Sensor Too Hot](https://user-images.githubusercontent.com/91289646/225115276-0f6cc46d-2c61-4246-ba92-d77ab97371d5.PNG)
 ![Temp Sensor Just Right](https://user-images.githubusercontent.com/91289646/225115289-ee73bc74-5286-4a68-973d-77626ca723f0.PNG)
 ![Temp Sensor Too Cold](https://user-images.githubusercontent.com/91289646/225115298-e0c5f8b0-e9cc-4708-ac90-1ad619c1ca31.PNG)
 
+</p>
+
+</details>
 
 ### Wiring
 ![Temperature Sensor Wiring Diagram](https://user-images.githubusercontent.com/91289646/225113007-83659c83-803a-46d3-a159-ff78cf442791.PNG)
