@@ -179,7 +179,7 @@ https://cvilleschools.instructure.com/courses/37129/assignments/493861/submissio
 </details>
             
 ### Wiring
-![circuitpython distance sensor wiring diagram](https://user-images.githubusercontent.com/91289646/226712771-32d4a1e1-1977-482d-a43b-bb6aefca958a.PNG)
+![image](https://user-images.githubusercontent.com/91289646/226712867-5bff7577-dadd-4ee9-beaa-025e815c0234.png)
 
 ### Reflection
 This assignment became much easier when breaking it down into smaller chunks. The main important part before the "while True:" is assigning "sonar" to the pin my distance sensor is connected to. After the "while True:" you just need to logically think about when each color comes in using the "simpleio.map_range". The LED should start off red and slowly go down, there should be no green and the blue should slowly come in. For the second half, there is no red, blue slowly fades out, and green will fade in. This all happens as you start close to your sensor and move out.
