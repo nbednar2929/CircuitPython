@@ -250,7 +250,7 @@ Uploading IMG_1397.MOV…
 </details>
             
 ### Wiring
-![circuitpython lcd](https://user-images.githubusercontent.com/91289646/200931957-11807ad1-e3bf-4a8a-99f2-55eba04de205.PNG)
+![circuitpython lcd](https://user-images.githubusercontent.com/91289646/226717138-952102e9-0643-4e53-94bb-35879aa8c468.PNG)
 
 ### Reflection
 This one extremely difficult for me to understand exactly what my code was doing since I took some of it off the internet. I overcomplicated the code and created multiple if and elif statements that were unecessary. I ended up just needing an if and an else and a final if that would change the counter if the parameteres from the prior if and else were met. I still don't fully understand how the line "lastBtn = btn.value" works given that I define them as equal but then later call that my counter will only change if they aren't eqaul, but the code works and that's all that matters.
