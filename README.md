@@ -347,7 +347,7 @@ while True:
 </details>
 
 ### Wiring
-![Temperature Sensor Wiring Diagram](https://user-images.githubusercontent.com/91289646/225113007-83659c83-803a-46d3-a159-ff78cf442791.PNG)
+![Temperature Sensor Wiring Diagram](https://user-images.githubusercontent.com/91289646/226713495-79e6fe79-04c2-47bf-959a-941c556d5143.PNG)
 
 ### Reflection
 This assignment wasn't super hard since I was able to take all of my lcd code from a past assignment. The wiring was self explanitory for the exacty same reason as why the code was easy. The main issue I ran into was that my LCD screen didn't print anything I asked it to. The reason was the blue box on the back of the lcd backpack has a scew hole that needed to be turned in order to change the brightness contrast of the LCD so that the screen can actually be seen. 
