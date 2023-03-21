@@ -8,6 +8,7 @@
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [Motor_Control](#Motor_Control)
 * [Temperature_Sensor](#Temperature_Sensor)
+* [Rotary_Encoder](#Rotary_Encoder) 
 * [Assignment_Template](#Assignment_Template) 
 ---
 
@@ -350,6 +351,102 @@ while True:
 
 ### Reflection
 This assignment wasn't super hard since I was able to take all of my lcd code from a past assignment. The wiring was self explanitory for the exacty same reason as why the code was easy. The main issue I ran into was that my LCD screen didn't print anything I asked it to. The reason was the blue box on the back of the lcd backpack has a scew hole that needed to be turned in order to change the brightness contrast of the LCD so that the screen can actually be seen. 
+
+## Rotary_Encoder
+
+### Description & Code
+For this assignment we were told to use a rotary encoder which when integrated with an LCD screen and LED's act as a traffic light.
+
+```python
+# Rotary Encodare light thingksf;ja
+import time
+import rotaryio
+import board
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+from digitalio import DigitalInOut, Direction, Pull
+
+
+encoder = rotaryio.IncrementalEncoder(board.D3, board.D2)
+last_position = 0
+btn = DigitalInOut(board.D1)
+btn.direction = Direction.INPUT
+btn.pull = Pull.UP
+state = 0
+Buttonyep = 1
+
+
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
+
+
+ledGreen = DigitalInOut(board.D8)
+ledYellow = DigitalInOut(board.D9)
+ledRed = DigitalInOut(board.D10)
+ledGreen.direction = Direction.OUTPUT
+ledYellow.direction = Direction.OUTPUT
+ledRed.direction = Direction.OUTPUT
+
+
+while True:
+    position = encoder.position
+    if position != last_position:
+        if position > last_position:
+            state = state + 1
+        elif position < last_position:
+            state = state - 1
+        if state > 2:
+            state = 2
+        if state < 0:
+            state = 0
+        print(state)
+        if state == 0: 
+            lcd.clear()
+            lcd.set_cursor_pos(0, 0)
+            lcd.print("Go")
+            ledGreen.value = True
+            ledRed.value = False
+            ledYellow.value = False
+        elif state == 1:
+            lcd.clear()
+            lcd.set_cursor_pos(0, 0)
+            lcd.print("Caution")
+            ledYellow.value = True
+            ledRed.value = False
+            ledGreen.value = False
+        elif state == 2:
+            lcd.clear()
+            lcd.set_cursor_pos(0, 0)
+            lcd.print("Stop")
+            ledRed.value = True
+            ledGreen.value = False
+            ledYellow.value = False
+    if btn.value == 1:
+        time.sleep(.1)
+        Buttonyep = 1
+    last_position = position
+
+```
+
+<details>
+<summary>Click to Show</summary>
+    
+<p>
+    
+### Evidence  
+![stop documentation](https://user-images.githubusercontent.com/91289646/226710908-93c5dc31-a083-451b-ba36-0f777f064b53.PNG)
+![caution documentation](https://user-images.githubusercontent.com/91289646/226710925-e42c0e14-9758-4480-a53d-c0924b18bea4.PNG)
+![go evidence](https://user-images.githubusercontent.com/91289646/226710933-125eb3fe-b724-4ae3-9518-aee6035369e1.PNG)
+
+</p>
+
+</details>
+    
+### Wiring
+![rotary encoder wiring diagram](https://user-images.githubusercontent.com/91289646/226709698-d6ce418a-a7ea-4021-a870-acf68751ab72.PNG)
+
+### Reflection
+This assignemnt I found difficult beacuse we were provdided with Arduino code to aid our creation of this assignment. I was never great at Arduino code and don't know its translation over to CircuitPython. I was able to find Kaz's code within the repository and used his encoder code. I wrote the rest of the code for my LED's to work  for my configuration. I later found out that online resources were really helpful for this assignment and that it's always worth a look online for coding sources.
 
 ________________
 ## Assignment_Template
