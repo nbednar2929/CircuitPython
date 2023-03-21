@@ -119,7 +119,7 @@ https://cvilleschools.instructure.com/courses/37129/assignments/493862/submissio
 </details>
     
 ### Wiring
-![circuitpython servo wiring diagram](https://user-images.githubusercontent.com/91289646/200931419-57c8162d-186b-44ca-bbd2-2bf7af23788f.PNG)
+![circuitpython servo wiring diagram](https://user-images.githubusercontent.com/91289646/226712159-b36fe1ff-0656-491e-94a0-2735d7a0f6e0.PNG)
 
 ### Reflection
 I used some code off the internet to get the servo to start spinning. I was confused with how the range variable wokred but when I hovered over it in VSCode it was really helpful in explaining what it does. For the buttons I just stole the code from the [CircuitPython_LCD](#CircuitPython_LCD) assignment but just made two button variables by just putting a two next "btn: in each line. 
