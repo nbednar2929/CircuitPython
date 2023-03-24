@@ -480,12 +480,12 @@ while True:
         
 ```
 
+### Evidence
 <details>
 <summary>Click to Show</summary>
     
 <p>
-    
-### Evidence
+   
 ![photointerrupter evidence](https://user-images.githubusercontent.com/91289646/227621696-b567911c-63c2-4ace-9a62-63967fb9f7ea.PNG)
 
 </p>
