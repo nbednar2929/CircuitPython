@@ -9,6 +9,7 @@
 * [Motor_Control](#Motor_Control)
 * [Temperature_Sensor](#Temperature_Sensor)
 * [Rotary_Encoder](#Rotary_Encoder) 
+* [Photointerrupter](#Photointerrupter)
 * [Assignment_Template](#Assignment_Template) 
 ---
 
@@ -448,6 +449,54 @@ while True:
 ### Reflection
 This assignemnt I found difficult beacuse we were provdided with Arduino code to aid our creation of this assignment. I was never great at Arduino code and don't know its translation over to CircuitPython. I was able to find Kaz's code within the repository and used his encoder code. I wrote the rest of the code for my LED's to work  for my configuration. I later found out that online resources were really helpful for this assignment and that it's always worth a look online for coding sources.
 
+## Photointerrupter
+
+### Description & Code
+Use a photinerrupter and track the amount of interrupts on an LCD screen.
+
+```python
+import time #imports
+import rotaryio
+import board
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+from digitalio import DigitalInOut, Direction, Pull
+
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16) #identify LCD screen
+
+photoint = DigitalInOut(board.D7) #identify photointerrupter
+photoint.pull =Pull.UP #pull up photointerrupter
+counter = 0 #create counter set to zero
+
+while True:
+    if photoint.value == True: #if photointerrupter 
+        counter = counter + 1 #add to counter
+        lcd.clear()
+        lcd.color = [0, 100, 0]
+        lcd.set_cursor_pos(0, 0) #set lcd cursor position
+        lcd.print("Interrupts:" + str(counter)) #print interrupts and counter on lcd
+        time.sleep(.5) #0.5sec delay
+        
+```
+
+<details>
+<summary>Click to Show</summary>
+    
+<p>
+    
+### Evidence
+![photointerrupter evidence](https://user-images.githubusercontent.com/91289646/227621696-b567911c-63c2-4ace-9a62-63967fb9f7ea.PNG)
+
+</p>
+
+</details>
+    
+### Wiring
+![photointerrupter wiring diagram](https://user-images.githubusercontent.com/91289646/227620204-34caae16-76a2-4049-a6cd-049fd0d377c7.PNG)
+
+### Reflection
+This assignement was super straight forward. All it requred was creating a counter and initalizing my photointerrupter as well as pulling it up. When the photointerrupter is interrupted the counter goes up by one. So all in all this was one of the easier assignements we've had to do this year.
 ________________
 ## Assignment_Template
 
