@@ -429,12 +429,12 @@ while True:
 
 ```
 
+### Evidence  
 <details>
 <summary>Click to Show</summary>
     
 <p>
     
-### Evidence  
 ![stop documentation](https://user-images.githubusercontent.com/91289646/226710908-93c5dc31-a083-451b-ba36-0f777f064b53.PNG)
 ![caution documentation](https://user-images.githubusercontent.com/91289646/226710925-e42c0e14-9758-4480-a53d-c0924b18bea4.PNG)
 ![go evidence](https://user-images.githubusercontent.com/91289646/226710933-125eb3fe-b724-4ae3-9518-aee6035369e1.PNG)
@@ -507,12 +507,13 @@ Code goes here
 
 ```
 
+### Evidence
 <details>
 <summary>Click to Show</summary>
     
 <p>
-    
-### Evidence
+
+(Evidence goes here!)
    
 </p>
 
