@@ -321,15 +321,15 @@ while True:
     lcd.print(str(fahrenheit)) #print temperature
     time.sleep(0.5)
     
-    if temp.value > 80:
+    if temp.value > 80: #if the temperature is higher than 80 degrees
+        lcd.set_cursor_pos(1,0) #set lcd cursor position
+        lcd.print("Too Hot!                ") #print too hot on lcd
+    elif temp.value < 50: #if the temperature is less than 50 degrees
         lcd.set_cursor_pos(1,0)
-        lcd.print("Too Hot!                ")
-    elif temp.value < 50:
+        lcd.print("Too Cold!                ") #print too cold on lcd
+    else:   #if the temperature is greater than 50 and less than 80
         lcd.set_cursor_pos(1,0)
-        lcd.print("Too Hot!                ")
-    else:
-        lcd.set_cursor_pos(1,0)
-        lcd.print("It Feels Great In Here! ")        
+        lcd.print("It Feels Great In Here! ") #print it feels great on lcd    
 
 ```
                         
