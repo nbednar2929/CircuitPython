@@ -447,7 +447,7 @@ while True:
 ![rotary encoder wiring diagram](https://user-images.githubusercontent.com/91289646/226709698-d6ce418a-a7ea-4021-a870-acf68751ab72.PNG)
 
 ### Reflection
-This assignemnt I found difficult beacuse we were provdided with Arduino code to aid our creation of this assignment. I was never great at Arduino code and don't know its translation over to CircuitPython. I was able to find Kaz's code within the repository and used his encoder code. I wrote the rest of the code for my LED's to work  for my configuration. I later found out that online resources were really helpful for this assignment and that it's always worth a look online for coding sources.
+This assignemnt I found difficult beacuse we were provided with Arduino code to aid our creation of this assignment. I was never great at Arduino code and don't know its translation over to CircuitPython. I was able to find Kaz's code within the repository and used his encoder code. I wrote the rest of the code for my LED's to work  for my configuration. I later found out that online resources were really helpful for this assignment and that it's always worth a look online for coding sources.
 
 ## Photointerrupter
 
