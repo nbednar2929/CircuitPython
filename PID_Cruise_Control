@@ -1,59 +1,70 @@
+#My Name is Optimus Prime
+#The autobots and I fled our world
+
+
 import time #import files
 import board
 import pwmio
-import simpleio
 import rotaryio
-from lcd.lcd import LCD
-from simple_pid import PID
+import analogio
+import pulseio
+import digitalio
+import simpleio
+from adafruit_motor import motor
+from PID_CPY import PID
 from analogio import AnalogOut, AnalogIn
 from digitalio import DigitalInOut, Direction, Pull
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 
-startBtn = DigitalInOut(board.D2) #identify button
-startBtn.direction = Direciton.INPUT
-startBtn.pull = Pull.UP
+AIN1 = pwmio.PWMOut(board.D7,duty_cycle=2 ** 20, frequency=40) #motor ouput
+AIN2 = pwmio.PWMOut(board.D6,duty_cycle=2 ** 20, frequency=40)
+BIN1 = pwmio.PWMOut(board.D9,duty_cycle=2 ** 20, frequency=40)
+BIN2 = pwmio.PWMOut(board.D8,duty_cycle=2 ** 20, frequency=40)
 
-i2c = board.I2C() #get an i2c object
-lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16) #initiate LCD screen
+motor1 = motor.DCMotor(AIN1,AIN2)
+motor2 = motor.DCMotor(BIN1,BIN2)
 
-motor1 = AnalogOut(board.A1) #motor ouput
-motor2 = AnalogOut(board.A2)
-photoint = DigitalInOut(board.D7) #identify photointerrupter
-photoint.pull = Pull.UP
-
-encoder = rotaryio.IncrementalEncoder(board.D3, board.D2)
+encoder = rotaryio.IncrementalEncoder(board.D1, board.D2)
 last_position = 0
-btn = DigitalInOut(board.D1)
+btn = DigitalInOut(board.D3)
 btn.direction = Direction.INPUT
 btn.pull = Pull.UP
 state = 0
-delta = 1
+delta = 1                  
+
+photoint = DigitalInOut(board.D11) #identify photointerrupter
+previous_time = 0
+rpm = 0
+
+pid = PID(1,0.1,0.05, setpoint=100)
+#pid.sample_time = 0.1
+pid.output_limits = (0,None)
 
 while True:
+    control = pid(rpm)
+
+    if  not photoint.value:
+        print("not today!")
+        current_time = time.monotonic()
+        time_diff = current_time - previous_time
+        #Speed = Distance / Time
+        rpm = (time_diff * 8) / 60
+        print("RPM: " + str(rpm), "TIme Diff: " + str(time_diff))
+
     position = encoder.position
     if position != last_position:
         if position > last_position:
             state = state + 1
         elif position < last_position:
             state = state - 1
-        if state > 2:
-            state = 2
-        if state < 0:
-            state = 0
-        print(state)
-        if state == 0: 
-            lcd.clear()
-            lcd.set_cursor_pos(0, 0)
-            lcd.print("Go")
-        elif state == 1:
-            lcd.clear()
-            lcd.set_cursor_pos(0, 0)
-            lcd.print("Caution")
-        elif state == 2:
-            lcd.clear()
-            lcd.set_cursor_pos(0, 0)
-            lcd.print("Stop")
+        if state > 0:
+            print("Enocder: " + str(state))
+            motor1.throttle = int(simpleio.map_range(state,1,20,0,65535)) / -65535
+            motor2.throttle = int(simpleio.map_range(state,1,20,0,65535)) / -65535
+            print("Motor Value: " + str(simpleio.map_range(state,1,10,0,65535)))
+            time.sleep(0.5)
     if btn.value == 1:
-        time.sleep(.1)
+        time.sleep(.5)
         delta = 1
     last_position = position
+
+    previous_time = current_time
