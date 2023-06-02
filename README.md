@@ -48,7 +48,7 @@ while True:
     time.sleep(.5)
     dot.fill((0,0,0)) 
     time.sleep(0.5)
-```
+```python
 ### Evidence
 <details>
 <summary>Click to Show</summary>
